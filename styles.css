@@ -1,0 +1,212 @@
+/* styles.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#logo {
+  height: 80%; /* Set the height to fill the navbar */
+  background-color: transparent; /* Set the background color to transparent */
+  object-fit: contain; /* Ensure the image fits inside the container without stretching */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  height: 70px; /* Adjust as needed */
+  background-color: rgba(0, 0, 0, 0.1); /* Initial background color with some transparency */
+  align-items: center;
+  padding: 0 20px;
+  z-index: 1000; /* Increase the z-index */
+  transition: background-color 0.3s; /* Smooth transition for background color change */
+}
+
+nav:hover {
+  background-color: rgba(90, 38, 38, 0.5); /* Darker background color on hover */
+}
+
+
+#nav-buttons button {
+  background-color: rgba(0, 0, 0, 0); /* Transparent background */
+  color: #fd0000; /* Text color */
+  border: none; /* Remove button border */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  padding: 10px 20px; /* Adjust button padding */
+  padding-bottom: 20px;
+  font-family: 'Yu Mincho', 'Yu Gothic', 'Hiragino Mincho Pro', 'MS PMincho', serif; /* Font family for ancient Japanese style */
+  font-size: 1em;
+  font-weight: bolder;
+  
+}
+
+#nav-buttons button:hover {
+  border-bottom: solid;
+
+}
+
+.page {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+
+.section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.title {
+  margin-top: 250px;
+  animation: glow 2s ease-in-out infinite alternate;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 4em;
+}
+
+.description {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 1.3em;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000;
+  }
+  to {
+    text-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 50px #ff0000, 0 0 60px #ff0000;
+  }
+}
+
+.title-page1 {
+  animation: glow-page1 2s ease-in-out infinite alternate;
+  color: transparent;
+  background: linear-gradient(to right, rgb(26, 13, 202), rgb(9, 50, 198));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.description-page1 {
+  animation: glow-page1 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow-page1 {
+  from {
+    text-shadow: 0 0 10px #17132e, 0 0 20px #17132e, 0 0 30px #17132e, 0 0 40px #17132e;
+  }
+  to {
+    text-shadow: 0 0 20px #0060ef, 0 0 30px #0060ef, 0 0 40px #0060ef, 0 0 50px #0060ef, 0 0 60px #0060ef;
+  }
+}
+
+.title-page2 {
+  animation: glow-page2 2s ease-in-out infinite alternate;
+}
+
+.description-page2 {
+  animation: glow-page2 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow-page2 {
+  from {
+    text-shadow: 0 0 10px #17132e, 0 0 20px #17132e, 0 0 30px #17132e, 0 0 40px #17132e;
+  }
+  to {
+    text-shadow: 0 0 20px #d5deeb, 0 0 30px #d5deeb, 0 0 40px #d5deeb, 0 0 50px #d5deeb, 0 0 60px #d5deeb;
+  }
+}
+
+.title-page3 {
+  animation: glow-page3 2s ease-in-out infinite alternate;
+  color: transparent;
+  background: linear-gradient(to right, rgb(8, 8, 8), rgb(4, 4, 4));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.description-page3 {
+  animation: glow-page3 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow-page3 {
+  from {
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000;
+  }
+  to {
+    text-shadow: 0 0 20px #b31414, 0 0 30px #b31414, 0 0 40px #b31414, 0 0 50px #b31414, 0 0 60px #b31414;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  /* Adjust styles for smaller screens */
+  nav {
+    flex-direction: column;
+  }
+  .page {
+    flex-direction: column;
+  }
+}
+
+/* Video backgrounds */
+#page1 .videoBackground1,
+#page2 .videoBackground2,
+#page3 .videoBackground3,
+#page4 .videoBackground4 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+
+
+/* Main page design */
+#main {
+  background: linear-gradient(to bottom, red, black); /* Black to red gradient */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Set the height to the viewport height */
+}
+
+.title-container {
+  position: relative;
+}
+
+.title1 {
+  font-family: 'Yu Mincho', 'Yu Gothic', 'Hiragino Mincho Pro', 'MS PMincho', serif; /* Font family for ancient Japanese style */
+  font-size: 10em; /* Set the font size to make it larger */
+  color: rgb(34, 5, 5); /* Set the text color */
+  animation: glow 2s ease-in-out infinite alternate;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.title2 {
+  position: absolute; /* Set position to absolute */
+  bottom: 0; /* Align to the bottom */
+  left: 75%; /* Position relative to the right edge of the container */
+  transform: translateX(10px); /* Adjust as needed */
+  font-family: 'Yu Mincho', 'Yu Gothic', 'Hiragino Mincho Pro', 'MS PMincho', serif; /* Font family for ancient Japanese style */
+  font-size: 1em; /* Set the font size */
+  color: rgb(190, 125, 125); /* Set the text color */
+  font-weight: 400;
+  font-style: normal;
+}
+
+
